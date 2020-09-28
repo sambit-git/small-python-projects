@@ -11,7 +11,7 @@ engine = pyttsx3.init()
 
 def init_speak_engine():
     voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[10].id)
+    engine.setProperty('voice', voices[0].id)
     # volume = engine.getProperty('volume')
     engine.setProperty('volume',1.0)
     # rate = engine.getProperty('rate')
@@ -127,7 +127,7 @@ if __name__ == "__main__":
         
         for i in range(3):
             speak_msg("Wanna continue?")
-            speak_msg("Press Y to continue or any other key to exit")
+            speak_msg("Press Y to continue or N to exit")
             again = input("\nTry again (y/n): ")
             if again.lower() not in ['y', 'n']:
                 print("\nWrong Input!")
